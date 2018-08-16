@@ -3,7 +3,7 @@ const Company = require('../models/company.model.js');
 // Create and Save a new Company
 exports.create = (req, res) => {
     // Validate request
-    if(!req.body.content) {
+    if(!req.body.name) {
         return res.status(400).send({
             message: "Company content can not be empty"
         });
